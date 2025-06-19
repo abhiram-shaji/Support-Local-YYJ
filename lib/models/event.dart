@@ -4,6 +4,7 @@ class Event {
   final String description;
   final String location;
   final DateTime date;
+  final String? image;
 
   Event({
     required this.id,
@@ -11,6 +12,7 @@ class Event {
     required this.description,
     required this.location,
     required this.date,
+    this.image,
   });
 
   factory Event.fromJson(Map<String, dynamic> json) {
@@ -20,6 +22,7 @@ class Event {
       description: json['description'] as String,
       location: json['location'] as String,
       date: DateTime.parse(json['date'] as String),
+      image: json['image'] as String?,
     );
   }
 }

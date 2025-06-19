@@ -61,6 +61,7 @@ flutter:
     - assets/data/businesses.json
     - assets/data/deals.json
     - assets/data/events.json
+    - assets/img/default.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

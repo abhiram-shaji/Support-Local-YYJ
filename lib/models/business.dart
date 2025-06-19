@@ -7,6 +7,7 @@ class Business {
   final String contact;
   final String website;
   final String mapLink;
+  final String? image;
 
   Business({
     required this.id,
@@ -17,6 +18,7 @@ class Business {
     required this.contact,
     required this.website,
     required this.mapLink,
+    this.image,
   });
 
   factory Business.fromJson(Map<String, dynamic> json) {
@@ -29,6 +31,7 @@ class Business {
       contact: json['contact'] as String,
       website: json['website'] as String,
       mapLink: json['mapLink'] as String,
+      image: json['image'] as String?,
     );
   }
 }
