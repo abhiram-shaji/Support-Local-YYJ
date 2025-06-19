@@ -10,6 +10,8 @@ class DealCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imagePath = deal.image ?? 'assets/img/default.png';
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textColor = isDark ? Colors.white : Colors.black;
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       clipBehavior: Clip.hardEdge,
@@ -28,7 +30,9 @@ class DealCard extends StatelessWidget {
             bottom: 0,
             child: Container(
               padding: const EdgeInsets.all(16),
-              color: Colors.black.withOpacity(0.9),
+              color: isDark
+                  ? Colors.black.withOpacity(0.9)
+                  : Colors.white.withOpacity(0.9),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -36,17 +40,16 @@ class DealCard extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .titleMedium
-                          ?.copyWith(color: Colors.white)),
+                          ?.copyWith(color: textColor)),
                   const SizedBox(height: 8),
-                  Text(deal.discountText,
-                      style: const TextStyle(color: Colors.white)),
+                  Text(deal.discountText, style: TextStyle(color: textColor)),
                   const SizedBox(height: 4),
                   Text(
                     'Expires: ${deal.expiry.toLocal().toString().split(' ')[0]}',
                     style: Theme.of(context)
                         .textTheme
                         .bodySmall
-                        ?.copyWith(color: Colors.white),
+                        ?.copyWith(color: textColor),
                   ),
                 ],
               ),

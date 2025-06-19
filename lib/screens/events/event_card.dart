@@ -8,6 +8,8 @@ class EventCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imagePath = event.image ?? 'assets/img/default.png';
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textColor = isDark ? Colors.white : Colors.black;
     return Card(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       clipBehavior: Clip.hardEdge,
@@ -26,7 +28,9 @@ class EventCard extends StatelessWidget {
             bottom: 0,
             child: Container(
               padding: const EdgeInsets.all(16),
-              color: Colors.black.withOpacity(0.9),
+              color: isDark
+                  ? Colors.black.withOpacity(0.9)
+                  : Colors.white.withOpacity(0.9),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -34,19 +38,18 @@ class EventCard extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .titleMedium
-                          ?.copyWith(color: Colors.white)),
+                          ?.copyWith(color: textColor)),
                   const SizedBox(height: 8),
-                  Text(event.location,
-                      style: const TextStyle(color: Colors.white)),
+                  Text(event.location, style: TextStyle(color: textColor)),
                   const SizedBox(height: 4),
                   Text(
                     'Date: ${event.date.toLocal().toString().split(' ')[0]}',
-                    style: const TextStyle(color: Colors.white),
+                    style: TextStyle(color: textColor),
                   ),
                   const SizedBox(height: 4),
                   Text(
                     event.description,
-                    style: const TextStyle(color: Colors.white),
+                    style: TextStyle(color: textColor),
                   ),
                 ],
               ),
