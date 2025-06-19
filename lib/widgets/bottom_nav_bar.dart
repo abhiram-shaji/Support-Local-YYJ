@@ -17,10 +17,14 @@ class MainBottomNavBar extends StatelessWidget {
     return BottomNavigationBar(
       currentIndex: currentIndex,
       onTap: onTap,
-      selectedItemColor:
-          brightness == Brightness.light ? Colors.black : Colors.white,
-      unselectedItemColor:
-          brightness == Brightness.light ? Colors.black54 : Colors.white70,
+      type: BottomNavigationBarType.fixed, // <-- important
+      showUnselectedLabels: true, // <-- show all labels
+      selectedItemColor: brightness == Brightness.light
+          ? Colors.black
+          : Colors.white,
+      unselectedItemColor: brightness == Brightness.light
+          ? Colors.black54
+          : Colors.white70,
       items: const [
         BottomNavigationBarItem(icon: Icon(Icons.local_offer), label: 'Deals'),
         BottomNavigationBarItem(icon: Icon(Icons.store), label: 'Businesses'),
