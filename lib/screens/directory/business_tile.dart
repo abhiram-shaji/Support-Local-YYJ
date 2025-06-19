@@ -28,30 +28,23 @@ class BusinessTile extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: Stack(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(16),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          business.name,
-                          style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          business.description,
-                          style: Theme.of(context).textTheme.bodySmall,
-                        ),
-                      ],
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      business.name,
+                      style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
                     ),
-                  ),
-                  if (business.tags.isNotEmpty)
-                    Positioned(
-                      top: 8,
-                      right: 8,
-                      child: Wrap(
+                    const SizedBox(height: 4),
+                    Text(
+                      business.description,
+                      style: Theme.of(context).textTheme.bodySmall,
+                    ),
+                    const SizedBox(height: 8),
+                    if (business.tags.isNotEmpty)
+                      Wrap(
                         spacing: 4,
                         runSpacing: 4,
                         children: business.tags
@@ -71,8 +64,8 @@ class BusinessTile extends StatelessWidget {
                                 ))
                             .toList(),
                       ),
-                    ),
-                ],
+                  ],
+                ),
               ),
             ),
           ],

@@ -28,7 +28,7 @@ class DealCard extends StatelessWidget {
             bottom: 0,
             child: Container(
               padding: const EdgeInsets.all(16),
-              color: Colors.black.withOpacity(0.5),
+              color: Colors.black.withOpacity(0.9),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
