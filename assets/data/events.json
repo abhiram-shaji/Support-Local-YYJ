@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Live Music at Market Square",
+    "description": "Support local bands every Saturday night.",
+    "location": "Market Square, Victoria",
+    "date": "2025-07-06"
+  },
+  {
+    "id": 2,
+    "title": "Downtown Night Market",
+    "description": "Artisan vendors, food trucks, and local crafts.",
+    "location": "Government Street",
+    "date": "2025-07-15"
+  },
+  {
+    "id": 3,
+    "title": "Community Beach Cleanup",
+    "description": "Join locals in keeping Willows Beach clean.",
+    "location": "Willows Beach",
+    "date": "2025-07-22"
+  }
+]

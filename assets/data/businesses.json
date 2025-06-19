@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Fern Café",
+    "description": "A cozy vegan cafe in downtown Victoria.",
+    "tags": ["Cafe", "Vegan", "Food"],
+    "hours": "8am - 6pm",
+    "contact": "hello@ferncafe.ca",
+    "website": "https://ferncafe.ca",
+    "mapLink": "https://maps.google.com/?q=Fern+Cafe"
+  },
+  {
+    "id": 2,
+    "name": "West Coast Threads",
+    "description": "Locally designed clothing inspired by Vancouver Island.",
+    "tags": ["Clothing", "Boutique", "Local"],
+    "hours": "10am - 5pm",
+    "contact": "info@westcoastthreads.ca",
+    "website": "https://westcoastthreads.ca",
+    "mapLink": "https://maps.google.com/?q=West+Coast+Threads"
+  },
+  {
+    "id": 3,
+    "name": "GreenWrench Auto",
+    "description": "Eco-friendly auto service shop.",
+    "tags": ["Mechanic", "Service", "Eco"],
+    "hours": "8am - 4pm",
+    "contact": "service@greenwrench.ca",
+    "website": "https://greenwrench.ca",
+    "mapLink": "https://maps.google.com/?q=GreenWrench+Auto"
+  }
+]
